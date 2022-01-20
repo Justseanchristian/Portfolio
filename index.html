@@ -10,20 +10,33 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://kit.fontawesome.com/6a2879b9ae.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="mobile-menu.js"></script>
 </head>
+
 <body>
-    <img class="background-1" src="img/bkg-1.jpg" alt="">
+
+    <!-- <img class="background-1" src="img/bkg-1.jpg" alt=""> -->
     <div class="fog"></div>
     <header>
+        <div class="menu-container">
+            <i class="fas fa-bars"></i>
+            <div class="menu"> 
+                <h1 class="close-menu">X</h1>
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <div class="mobile-bkg"></div>
+        </div>
         <div class="nav-shadow"></div> 
-        <a href="index.html"><h1 class="logo">Sean <span class="poore">Poore</span></h1></a>
+        <a href="index.html"><h1 class="logo">Sean <span>Christian</span></h1></a>
         <nav class="navbar">
             <ul class="nav">
-                <a href="#top"><li class="nav-link">Home</li></a>
+                <a href="index.html"><li class="nav-link">Home</li></a>
                 <a href="#about"><li class="nav-link">About</li></a>
                 <a href="#services"><li class="nav-link">Services</li></a>
-                <a href="contact.html"><li class="nav-link">Contact</li></a>
+                <a href="mailto:rosaparks2891@gmail.com?subject=Website Inquiry"><li class="nav-link">Contact</li></a>
             </ul>
         </nav>
     </header>
@@ -31,9 +44,9 @@
     <!-- Title page -->
     <section class="title">
         <p>Hello, my name is</p>
-        <h1>Sean Poore<span>.</span></h1>
+        <h1>Sean Christian<span>.</span></h1>
         <h2>And I'm a <span class="typing"></span></h2>
-        <a class="hire" href="contact.html">Hire me</a>
+        <a class="hire" href="mailto:rosaparks2891@gmail.com?subject=Website Inquiry">Hire me</a>
     </section>
 
     <!-- About -->
@@ -41,7 +54,7 @@
         <div class="about-bkg">
             <h2 class="about-title">About Me</h2>
             <h3 class="about-sub">━  <span>who I am</span>  ━</h3>
-            <img src="img/sean.jpg" class="about-image">
+            <img src="https://freesvg.org/img/Placeholder.png" class="about-image">
             <h3 class="about-intro">I'm Sean and I'm a <span class="typing-2"></span></h3>
             <p class="about-content"> 
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis quam tempora soluta non eum accusamus, quidem porro 
@@ -49,8 +62,6 @@
                 inventore incidunt excepturi eligendi harum magni rerum delectus odio, consequatur quidem cumque ab deserunt quia sed 
                 earum repudiandae laudantium natus. Dolores deserunt eaque sapiente fuga non eveniet ut eos modi fugiat culpa pariatur 
                 odit perspiciatis ratione expedita libero officia doloribus itaque, cumque sed id aspernatur rerum nobis minima sequi. 
-                Aliquam dolore in quasi aspernatur temporibus ea, excepturi asperiores quod consequuntur sapiente magni porro, 
-                obcaecati soluta fugit? Veniam.
             </p>
         </div>
     </section>
@@ -58,8 +69,10 @@
     <!-- Services -->
     <section class="services" id="services">
         <div class="services-bkg">
-            <h2 class="services-title">My Services</h1>
-            <h3 class="services-sub">━  <span>what I provide</span>  ━</h3>
+            <div class="container">
+                <h2 class="services-title">My Services</h1>
+                <h3 class="services-sub">━  <span>what I provide</span>  ━</h3>
+            </div>
             <div class="services-cards">
                 <div class="services-card-1">
                     <i class="fas fa-paint-brush"></i>
@@ -82,8 +95,8 @@
         </div>
     </section>
 
-    <footer>
-        <p>Created by <a href="mailto:rosaparks2891@gmail.com"><span>Sean Poore</span></a> | &copy; 2022 All Rights Reserved.</p>
+    <footer id="mobile-footer-bug">
+        <p>Created by <a href="mailto:rosaparks2891@gmail.com"><span>Sean Christian</span></a> | &copy; 2022 All Rights Reserved.</p>
     </footer>
 
 </body>

@@ -7,23 +7,25 @@
     scroll-behavior: smooth;
 }
 
-.background-1 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100vw;
-    height: auto;
-    z-index: 1;
+body {
+    background-image: url(img/bkg-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(32, 32, 32, 0.3);
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.fas {
+    display: none;
 }
 
 .fog {
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-color: rgba(32, 32, 32, 0.3);
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: rgba(32, 32, 32, 0.3);
+    background-attachment: fixed;
 }
 
 .nav-shadow {
@@ -31,7 +33,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 10%;
+    max-height: 10%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 4;
     transition: 1s;
@@ -49,6 +51,7 @@
     padding-left: 1em;
     cursor: pointer;
     transition: 1s;
+    vertical-align: -webkit-baseline-middle;
 }
 
 .logo span {
@@ -71,6 +74,7 @@
     list-style: none;
     cursor: pointer;
     transition: 1s;
+    vertical-align: -webkit-baseline-middle;
 }
 
 .nav-link {
@@ -155,6 +159,7 @@
     padding-left: 1em;
     cursor: pointer;
     transition: 1s;
+    vertical-align: -webkit-baseline-middle;
 }
 
 .logo span.purple {
@@ -177,6 +182,7 @@
     list-style: none;
     cursor: pointer;
     transition: 1s;
+    vertical-align: -webkit-baseline-middle;
 }
 
 .nav-link.purple {
@@ -256,7 +262,7 @@
 .services-bkg {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0; 
     background-color: #111;
     width: 100%;
     height: 75vh;
@@ -283,11 +289,13 @@
 }
 
 .services-cards {
-    display: inline-block;
-    height: 350px;
-    width: 100%;
-    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
     text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
 }
 
 .services-card-1, 
@@ -335,27 +343,21 @@
 }
 
 .services-card-1 {
-    position: absolute;
-    top: 200px;
-    left: 275px;
+    /* display: inline-block; */
     background-color: #222;
     width: 300px;
     height: 260px;
 }
 
 .services-card-2 {
-    position: absolute;
-    top: 200px;
-    left: 610px;
+    /* display: inline-block; */
     background-color: #222;
     width: 300px;
     height: 260px;
 }
 
 .services-card-3 {
-    position: absolute;
-    top: 200px;
-    right: 275px;
+    /* display: inline-block; */
     background-color: #222;
     width: 300px;
     height: 260px;
@@ -391,4 +393,182 @@ footer span:hover {
 
 footer a {
     text-decoration: none;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    
+    nav {
+        display: none;
+    }
+
+    .purple {
+        display: none;
+    }
+
+    .logo {
+       top: 0;
+       left: 0;
+       padding: 7px 0 0 12px;
+    }
+
+    .title {
+        left: 25px;
+        top: 100px;
+    }
+
+    .title p {
+        font-size: 1rem;
+    }
+
+    .title h1 {
+        font-size: 2rem;
+    }
+
+    .title h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .hire {
+        font-size: 1rem;
+        padding: 10px 20px 10px 20px;
+        border: rgb(85,51,255) solid 3px;
+
+    }
+
+    .nav-shadow {  
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100vw;
+        min-height: 45px;
+        transition: 1s;
+    }
+
+    .about-intro {
+        margin-top: 2rem;
+        font-size: 1.3rem;
+        margin-left: 17.9px;
+    }
+
+    .about-bkg {
+        margin-top: 50vh;
+        height: 150vh;
+    }
+
+    .about-image {
+        margin: 0 0 0 45px;
+        width: 75%;
+        float: none;
+    }
+
+    .about-content {
+        font-size: 1rem;
+        width: 90%;
+        margin: auto;
+    }
+
+    .services-bkg {
+        height: 1150px;
+    }
+
+    .services-cards {
+        text-align: center;
+    }
+
+    .services-card-1, 
+    .services-card-2,
+    .services-card-3 {
+        position: relative;
+        margin: auto;
+        top: 0;
+        left: 0;
+    }
+
+    #mobile-footer-bug {
+        margin-top: 2740px;
+        height: 70px;
+    }
+
+    .fa-bars {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        font-size: 1.25rem;
+        z-index: 5;
+        margin: 10px;
+    }
+
+    .menu.toggled {
+        z-index: 6;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        margin: 0;
+    }
+
+    .close-menu {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 7;
+    }
+
+}
+
+@media screen and (max-width: 1305px) {
+
+    .services-bkg {
+        height: 970px;
+    }
+
+    .services-card-3 {
+        margin-top: 13%;
+    }
+
+    footer {
+        margin-top: 2737px;
+    }
+
+} 
+
+@media screen and (max-width: 876px) {
+
+    .services-bkg {
+        min-height: 1200px;
+    }
+
+    .services-card-1,
+    .services-card-2,
+    .services-card-3 {
+        margin: 1rem 0;
+    }
+
+    footer {
+        margin-top: 2980px;
+    }
+
+}
+
+@media print {
+    body {
+        background-color: white;
+    }
+
+    nav {
+        display: none;
+    }
+
+    header {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
 }
