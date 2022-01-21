@@ -509,15 +509,35 @@ footer a {
         height: 100%;
         background-color: white;
         margin: 0;
+        transition: all 0.5s ease-out;
     }
 
-    .menu.toggled .close-menu {
+    .menu.toggled .fas.fa-times.close-menu {
         margin: 10px;
         position: absolute;
         top: 0;
         right: 0;
         z-index: 7;
-        font-size: 1.25rem;
+        font-size: 1.4rem;
+        color: black;
+    }
+
+    .menu.toggled ul {
+        list-style: none;
+        position: absolute;
+        top: 75px;
+        left: 120px;
+    }
+
+    .menu.toggled ul li {
+        font-size: 22px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .menu.toggled ul li:hover {
+        font-size: 22px;
+        color: rgb(133, 109, 255);
     }
 
 }
