@@ -1,156 +1,157 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 * {
-  overflow: hidden;
-  z-index: 6;
+    overflow: hidden;
+    z-index: 6;
 }
 
 #bkg-1 {
-  max-width: 100%;
-  max-height: auto;
+    max-width: 100%;
+    max-height: auto;
 }
 
 .nav-shadow,
 .navbar,
 .logo {
-  z-index: 7;
+    z-index: 7;
 }
 
 .background-1 {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .fog {
-  display: none;
+    display: none;
 }
 
 .form-group label {
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 400;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .form-group input,
 #message {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }
 
 #button {
-  background-color: rgba(85, 51, 255, 0.9);
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
-  transition: ease 0.3s;
+    background-color: rgba(85,51,255,0.9);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    transition: ease 0.3s;
 }
 
 #button:hover {
-  color: rgba(85, 51, 255, 0.9);
-  background-color: rgb(255, 255, 255, 0.8);
-  transition: ease 0.3s;
+    color: rgba(85,51,255,0.9);
+    background-color: rgb(255, 255, 255, 0.8);
+    transition: ease 0.3s;
+
 }
 
 section {
-  height: 80vh;
-  width: 100%;
-  margin-top: 16.5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+    height: 80vh;
+    width: 100%;
+    margin-top: 16.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-.container {
-  width: 90%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  box-shadow: 0px 0px 20px #00000010;
-  background-color: rgba(85, 51, 255, 0.5);
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
+  .container {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000010;
+    background-color: rgba(85,51,255,0.5);
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
 
-.form-group {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 20px;
-}
+  .form-group {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 5px;
-  font-size: 18px;
-  border: 1px solid rgba(128, 128, 128, 0.199);
-  margin-top: 5px;
-}
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
 
-textarea {
-  resize: vertical;
-}
+  button[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    color: rgb(27, 166, 247);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 2px;
+    transition: 0.3s ease;
+  }
 
-button[type="submit"] {
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 10px;
-  font-size: 24px;
-  border-radius: 8px;
-  font-family: "Montserrat";
-  color: rgb(27, 166, 247);
-  text-align: center;
-  cursor: pointer;
-  margin-top: 2px;
-  transition: 0.3s ease;
-}
+  button[type="submit"]:hover {
+    background-color: rgb(214, 226, 236);
+  }
 
-button[type="submit"]:hover {
-  background-color: rgb(214, 226, 236);
-}
+  #status {
+    position: absolute;
+    top: 2%;
+    left: 33%;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    transition: all 0.3s;
+  }
 
-#status {
-  position: absolute;
-  top: 2%;
-  left: 33%;
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-  padding: 10px;
-  margin: 0 auto;
-  border-radius: 8px;
-  z-index: 10;
-  transition: all 0.3s;
-}
+  #status.success {
+    background-color: rgb(211, 250, 153);
+    animation: status 4s ease forwards;
+  }
 
-#status.success {
-  background-color: rgb(211, 250, 153);
-  animation: status 4s ease forwards;
-}
-
-#status.error {
-  background-color: rgb(250, 129, 92);
-  color: white;
-  animation: status 4s ease forwards;
-}
+  #status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+  }
 
 footer {
-  margin-top: 124vh;
-  display: none;
+    margin-top: 124vh;
+    display: none;
 }
 
 @keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
