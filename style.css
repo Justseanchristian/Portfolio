@@ -490,8 +490,8 @@ footer a {
     }
 
     #mobile-footer-bug {
-        margin-top: 2740px;
-        height: 70px;
+        margin-top: 2841px;
+        height: inherit;
     }
 
     .fa-bars {
