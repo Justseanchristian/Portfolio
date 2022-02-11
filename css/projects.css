@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.project {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    color: white;
+    background-color: rgba(61, 61, 61, 0.705);
+    margin: 125px 100px;
+    border-radius: 15px;
+    padding: 16px;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.25s;
+    background-color: rgba(85, 51, 255, 0.712);
+}
+
+.project:hover {
+    z-index: 4;
+}
+
+.project:hover .project-btn {
+    background-color: rgba(61, 61, 61, 0.705);
+}
+
+.project-name {
+    margin-bottom: 10px;
+}
+
+.project-btn {
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 15px 15px;
+    padding: 5px 30px;
+    border-radius: 10px;
+    background-color: rgba(85, 51, 255, 0.712);
+    cursor: pointer;
+    left: 0;
+    text-decoration: none;
+    color: white;
+    width: 151px;
+    text-align: center;
+}
+
+.project-img {
+    width: 368px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.img-link {
+    display: none;
+}
